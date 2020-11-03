@@ -445,7 +445,7 @@ pediatric study. A regular csv format is expected for such a file.
 
 The example below shows a template of such a study design content.
 
-| Organism|Weight | Organism|Weight | Gender         | Applications|IV Bolus|DrugMass |
+| Organism\|Weight | Organism\|Weight | Gender         | Applications\|IV Bolus\|DrugMass |
 | :-------------- | :-------------- | :------------- | :----------------------------- |
 | kg              | kg              |                | nmol                           |
 | SOURCE\_MIN     | SOURCE\_MAX     | SOURCE\_EQUALS | TARGET                         |
