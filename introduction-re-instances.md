@@ -2,31 +2,29 @@
 
 <div id="TOC">
 
-  - [<span>1</span> Introduction](#introduction)
-      - [<span>1.1</span> Nomenclature](#nomenclature)
-      - [<span>1.2</span> General scheme](#general-scheme)
-  - [<span>2</span> Workflow](#workflow)
-      - [<span>2.1</span> MeanModelWorkflow](#meanmodelworkflow)
-      - [<span>2.2</span> PopulationWorkflow](#populationworkflow)
-      - [<span>2.3</span> Creation of a
-        Workflow](#creation-of-a-workflow)
-  - [<span>3</span> Simulation sets](#simulation-sets)
-      - [<span>3.1</span> Simulation file](#simulation-file)
-      - [<span>3.2</span> Population file](#population-file)
-          - [<span>3.2.1</span> Study Design file](#study-design-file)
-      - [<span>3.3</span> Format of data files](#format-of-data-files)
-          - [<span>3.3.1</span> Data file](#data-file)
-          - [<span>3.3.2</span> Dictionary file](#dictionary-file)
-      - [<span>3.4</span> Outputs](#outputs)
-          - [<span>3.4.1</span> Path](#path)
-          - [<span>3.4.2</span> Data selection](#data-selection)
-          - [<span>3.4.3</span> PK parameters](#pk-parameters)
-  - [<span>4</span> Task objects](#task-objects)
-  - [<span>5</span> Workflow outputs](#workflow-outputs)
-      - [<span>5.1</span> Logs](#logs)
-      - [<span>5.2</span> Result directories](#result-directories)
-      - [<span>5.3</span> Reports and
-        appendices](#reports-and-appendices)
+  - [1 Introduction](#introduction)
+      - [1.1 Nomenclature](#nomenclature)
+      - [1.2 General scheme](#general-scheme)
+  - [2 Workflow](#workflow)
+      - [2.1 MeanModelWorkflow](#meanmodelworkflow)
+      - [2.2 PopulationWorkflow](#populationworkflow)
+      - [2.3 Creation of a Workflow](#creation-of-a-workflow)
+  - [3 Simulation sets](#simulation-sets)
+      - [3.1 Simulation file](#simulation-file)
+      - [3.2 Population file](#population-file)
+          - [3.2.1 Study Design file](#study-design-file)
+      - [3.3 Format of data files](#format-of-data-files)
+          - [3.3.1 Data file](#data-file)
+          - [3.3.2 Dictionary file](#dictionary-file)
+      - [3.4 Outputs](#outputs)
+          - [3.4.1 Path](#path)
+          - [3.4.2 Data selection](#data-selection)
+          - [3.4.3 PK parameters](#pk-parameters)
+  - [4 Task objects](#task-objects)
+  - [5 Workflow outputs](#workflow-outputs)
+      - [5.1 Logs](#logs)
+      - [5.2 Result directories](#result-directories)
+      - [5.3 Reports and appendices](#reports-and-appendices)
 
 </div>
 
@@ -50,7 +48,7 @@ OSP-Suite Reporting Engine package (`ospsuite.reportingengine`).
 
 <div id="introduction" class="section level1" data-number="1">
 
-# <span class="header-section-number">1</span> Introduction
+# 1 Introduction
 
 The `ospsuite.reportingengine` package aims at facilitating the design
 and build of reports evaluating PBPK models developed on PK-Sim or/and
@@ -91,7 +89,7 @@ structured environment works with 2 types of objects:
 
 <div id="nomenclature" class="section level2" data-number="1.1">
 
-## <span class="header-section-number">1.1</span> Nomenclature
+## 1.1 Nomenclature
 
 Table 1 defines some of the main instances of the
 `ospsuite.reportingengine` package usually defined by users during the
@@ -119,7 +117,7 @@ Table 1: Nomenclature of `ospsuite.reportingengine` main instances
 
 <div id="general-scheme" class="section level2" data-number="1.2">
 
-## <span class="header-section-number">1.2</span> General scheme
+## 1.2 General scheme
 
 A working example of workflow script is provided below for reporting a
 time profile plot on *Minimodel2.pkml*.
@@ -226,7 +224,7 @@ plotted in a logarithmic scale.
 
 <div id="workflow" class="section level1" data-number="2">
 
-# <span class="header-section-number">2</span> Workflow
+# 2 Workflow
 
 `Workflow` objects are central in the Reporting Engine as they summarize
 which evaluations are performed and how they are reported. As
@@ -255,7 +253,7 @@ available and can be created:
 
 <div id="meanmodelworkflow" class="section level2" data-number="2.1">
 
-## <span class="header-section-number">2.1</span> MeanModelWorkflow
+## 2.1 MeanModelWorkflow
 
 The process included in `MeanModelWorkflow` can be illustrated by Figure
 1.
@@ -284,7 +282,7 @@ Figure 1: Mean model workflow inputs and tasks
 
 <div id="populationworkflow" class="section level2" data-number="2.2">
 
-## <span class="header-section-number">2.2</span> PopulationWorkflow
+## 2.2 PopulationWorkflow
 
 The process included in `PopulationWorkflow` can be illustrated by
 Figure 2.
@@ -335,7 +333,7 @@ Figure 2: Population workflow inputs and tasks
 
 <div id="creation-of-a-workflow" class="section level2" data-number="2.3">
 
-## <span class="header-section-number">2.3</span> Creation of a Workflow
+## 2.3 Creation of a Workflow
 
 To create a `MeanModelWorkflow` or a `PopulationWorkflow` object, the
 method `$new()` needs to be used as follow:
@@ -374,7 +372,7 @@ defined in section **2.2**.
 
 <div id="simulation-sets" class="section level1" data-number="3">
 
-# <span class="header-section-number">3</span> Simulation sets
+# 3 Simulation sets
 
 As workflows can evaluate multiple simulations, populations and
 datasets, the creation of `MeanModelWorkflow` and `PopulationWorkflow`
@@ -416,7 +414,7 @@ sub-sections will provide more details on each input:
 
 <div id="simulation-file" class="section level2" data-number="3.1">
 
-## <span class="header-section-number">3.1</span> Simulation file
+## 3.1 Simulation file
 
 A simulation file, `simulationFile` is an export of a simulation from
 MoBi or PK-SIM in pkml format. Display names for the simulation and the
@@ -427,7 +425,7 @@ simulation set can be provided using `simulationName` and
 
 <div id="population-file" class="section level2" data-number="3.2">
 
-## <span class="header-section-number">3.2</span> Population file
+## 3.2 Population file
 
 A population file, `populationFile`, is collection of parameter paths
 and parameter values normally an export of a population from PK-SIM in
@@ -439,7 +437,7 @@ for the population can be provided using `populationName`.
 
 <div id="study-design-file" class="section level3" data-number="3.2.1">
 
-### <span class="header-section-number">3.2.1</span> Study Design file
+### 3.2.1 Study Design file
 
 The study design file, `studyDesignFile`, contains additional
 information on the study design, e.g. a body weight dependent dose in a
@@ -465,7 +463,7 @@ Table 2: Example of study design content
 
 <div id="format-of-data-files" class="section level2" data-number="3.3">
 
-## <span class="header-section-number">3.3</span> Format of data files
+## 3.3 Format of data files
 
 **If your workflow uses data, you must provide two files**: one file
 containing the data in the Nonmem format, `observedDataFile`, and a
@@ -475,7 +473,7 @@ the data file. Display names for the data can be provided using
 
 <div id="data-file" class="section level3" data-number="3.3.1">
 
-### <span class="header-section-number">3.3.1</span> Data file
+### 3.3.1 Data file
 
 The Nonmem file can be a blank separated text file or a csv file, column
 headers are used later as R variable names, and they must not contain
@@ -491,7 +489,7 @@ contain both.
 
 <div id="dictionary-file" class="section level3" data-number="3.3.2">
 
-### <span class="header-section-number">3.3.2</span> Dictionary file
+### 3.3.2 Dictionary file
 
 The dictionary is a csv file mapping the data file. Unlike the Matlab
 version of the reporting engine, a regular csv with a comma (“,”) as
@@ -526,7 +524,7 @@ Table 3: Template for data dictionary
 
 <div id="outputs" class="section level2" data-number="3.4">
 
-## <span class="header-section-number">3.4</span> Outputs
+## 3.4 Outputs
 
 An `Output` object defines simulation paths and can define associated PK
 parameters and observed data. Below is the syntax for creating such
@@ -546,7 +544,7 @@ each input:
 
 <div id="path" class="section level3" data-number="3.4.1">
 
-### <span class="header-section-number">3.4.1</span> Path
+### 3.4.1 Path
 
 The input variable `path` indicates the path name within a simulation
 (e.g. ‘*Organism|PeripheralVenousBlood|Raltegravir|Plasma (Peripheral
@@ -558,7 +556,7 @@ and `displayUnit`.
 
 <div id="data-selection" class="section level3" data-number="3.4.2">
 
-### <span class="header-section-number">3.4.2</span> Data selection
+### 3.4.2 Data selection
 
 For tasks such as goodness of fit, observed data can be used. Usually,
 the data is included into one unique Nonmem data file which needs to be
@@ -577,7 +575,7 @@ names (e.g. ‘*SID\>0*’ or ‘*AGE\<12 & SEX==1*’).
 
 <div id="pk-parameters" class="section level3" data-number="3.4.3">
 
-### <span class="header-section-number">3.4.3</span> PK parameters
+### 3.4.3 PK parameters
 
 The input `pkParameters` indicates the `path` related PK parameters that
 the user wants to include in his analysis. A list of pk parameter names
@@ -613,7 +611,7 @@ directly the list of their names to the input `pkParameters`.
 
 <div id="task-objects" class="section level1" data-number="4">
 
-# <span class="header-section-number">4</span> Task objects
+# 4 Task objects
 
 As illustrated in Figures 1 and 2, workflows can perform tasks on a list
 of simulation sets. Some of these tasks are not necessarily run or can
@@ -682,7 +680,7 @@ parameters …) Task details will be provided in dedicated vignettes.
 
 <div id="workflow-outputs" class="section level1" data-number="5">
 
-# <span class="header-section-number">5</span> Workflow outputs
+# 5 Workflow outputs
 
 Once the workflow and its settings have been defined, the workflow
 method **$runWorkflow()** will run all the active tasks and generate all
@@ -692,7 +690,7 @@ reports.
 
 <div id="logs" class="section level2" data-number="5.1">
 
-## <span class="header-section-number">5.1</span> Logs
+## 5.1 Logs
 
 Three types of logs can be generated during the creation, design and run
 of a workflow:
@@ -708,7 +706,7 @@ of a workflow:
 
 <div id="result-directories" class="section level2" data-number="5.2">
 
-## <span class="header-section-number">5.2</span> Result directories
+## 5.2 Result directories
 
 Each task will save its results in a dedicated directory. The names of
 the results directory are as follow:
@@ -749,7 +747,7 @@ using **setPlotFormat()**.
 
 <div id="reports-and-appendices" class="section level2" data-number="5.3">
 
-## <span class="header-section-number">5.3</span> Reports and appendices
+## 5.3 Reports and appendices
 
 Each plot task will save an appendix file besides its results as a
 markdown format report. These appendices are saved directly within the
