@@ -1,3 +1,7 @@
+<style>
+div.reportOutput { background-color:#e6f0ff; border-radius: 5px; padding: 20px; border-style: solid none solid solid;}
+</style>
+
 The associated report will be as follows:
 
 <div class="reportOutput">
